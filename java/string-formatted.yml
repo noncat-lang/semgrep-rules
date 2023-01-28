@@ -1,0 +1,8 @@
+rules:
+  - id: string-formatted
+    languages:
+      - java
+    message: "String.formatted is unsafe!"
+    severity: ERROR
+    pattern-either:
+      - pattern: "(String $X).formatted(...)"

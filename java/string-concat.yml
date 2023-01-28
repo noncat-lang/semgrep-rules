@@ -1,0 +1,8 @@
+rules:
+  - id: string-concat
+    languages:
+      - java
+    message: "String.concat is unsafe!"
+    severity: ERROR
+    pattern-either:
+      - pattern: "(String $X).concat(...)"

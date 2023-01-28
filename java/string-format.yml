@@ -1,0 +1,8 @@
+rules:
+  - id: string-format
+    languages:
+      - java
+    message: "String.format is unsafe!"
+    severity: ERROR
+    pattern-either:
+      - pattern: "String.format(...)"

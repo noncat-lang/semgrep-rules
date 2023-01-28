@@ -1,0 +1,8 @@
+rules:
+  - id: string-substring
+    languages:
+      - java
+    message: "String.substring is unsafe!"
+    severity: ERROR
+    pattern-either:
+      - pattern: "(String $X).substring(...)"

@@ -1,0 +1,8 @@
+rules:
+  - id: string-replaceAll
+    languages:
+      - java
+    message: "String.replaceAll is unsafe!"
+    severity: ERROR
+    pattern-either:
+      - pattern: "(String $X).replaceAll(...)"

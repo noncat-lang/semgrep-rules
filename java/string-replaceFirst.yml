@@ -1,0 +1,8 @@
+rules:
+  - id: string-replaceFirst
+    languages:
+      - java
+    message: "String.replaceFirst is unsafe!"
+    severity: ERROR
+    pattern-either:
+      - pattern: "(String $X).replaceFirst(...)"

@@ -1,0 +1,9 @@
+rules:
+  - id: string-plus-operator
+    languages:
+      - java
+    message: "String concatenation is unsafe!"
+    severity: ERROR
+    pattern-either:
+      - pattern: "$X + (String $Y)"
+      - pattern: "(String $X) + $Y"

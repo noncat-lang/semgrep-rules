@@ -1,0 +1,8 @@
+rules:
+  - id: string-replace
+    languages:
+      - java
+    message: "String.replace is unsafe!"
+    severity: ERROR
+    pattern-either:
+      - pattern: "(String $X).replace(...)"
