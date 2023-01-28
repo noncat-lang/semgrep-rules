@@ -1,0 +1,17 @@
+name: semgrep-rules-test
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+jobs:
+  semgrep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+      - run: pip3 install semgrep
+      - run: semgrep --validate --config .
+      - run: semgrep --test --test-ignore-todo
