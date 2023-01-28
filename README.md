@@ -1,1 +1,1 @@
-# semgrep-rules
+# Noncat Semgrep rules
