@@ -7,3 +7,4 @@ rules:
     pattern-either:
       - pattern: "$X + (String $Y)"
       - pattern: "(String $X) + $Y"
+      - pattern: "(String $X) += $Y"
